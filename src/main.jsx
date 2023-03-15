@@ -5,8 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './routes/Dashboard';
 import Login from './routes/Login';
 import './App.css';
-import Clients from './routes/Dashboard/Clients';
-import AddClient from './routes/Dashboard/AddClient';
+import Clients from './routes/Dashboard/Clients/Clients';
+import AddClient from './routes/Dashboard/Clients/AddClient';
 
 const router = createBrowserRouter([
   {

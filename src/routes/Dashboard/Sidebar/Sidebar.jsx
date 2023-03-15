@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import avatar from '../../../assets/Avatars.png';
 
 const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState('');
+  const { pathname } = useLocation();
+
   return (
     <>
       <div
@@ -23,7 +24,7 @@ const Sidebar = () => {
                 width='16'
                 height='16'
                 fill='currentColor'
-                class='bi bi-search'
+                className='bi bi-search'
                 viewBox='0 0 16 16'
               >
                 <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z' />
@@ -60,9 +61,8 @@ const Sidebar = () => {
               to='/clients'
               role='button'
               className={`  px-4 py-2 rounded-3 my-0  ${
-                activeTab === 'clients' && 'primarybg text-white shadow-sm'
+                pathname === '/clients' && 'primarybg text-white shadow-sm'
               }`}
-              onClick={() => setActiveTab('clients')}
               style={{
                 fontSize: '16px',
                 textDecoration: 'none',
@@ -75,14 +75,13 @@ const Sidebar = () => {
               to='/add'
               role='button'
               className={`px-4 py-2 rounded-3  my-0 ${
-                activeTab === 'add' && 'primarybg text-white shadow-sm'
+                pathname === '/add' && 'primarybg text-white shadow-sm'
               }`}
               style={{
                 fontSize: '16px',
                 textDecoration: 'none',
                 color: '#B8BABC',
               }}
-              onClick={() => setActiveTab('add')}
             >
               Add Client
             </Link>
@@ -148,9 +147,8 @@ const Sidebar = () => {
           <Link
             to='/clients'
             className={`d-flex flex-column gap-2    py-2 my-0 ${
-              activeTab === 'clients' && 'primarybg shadow-sm'
+              pathname === '/clients' && 'primarybg shadow-sm'
             }  `}
-            onClick={() => setActiveTab('clients')}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -158,7 +156,7 @@ const Sidebar = () => {
               height='25'
               fill='currentColor'
               className={`bi bi-view-stacked w-100 ${
-                activeTab === 'clients' && 'text-white'
+                pathname === '/clients' && 'text-white'
               }`}
               viewBox='0 0 16 16'
             >
@@ -169,9 +167,8 @@ const Sidebar = () => {
           <Link
             to='/add'
             className={`d-flex flex-column gap-2   py-2 my-0  ${
-              activeTab === 'add' && 'primarybg shadow-sm'
+              pathname === '/add' && 'primarybg shadow-sm'
             } `}
-            onClick={() => setActiveTab('add')}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -179,7 +176,7 @@ const Sidebar = () => {
               height='25'
               fill='currentColor'
               className={`bi bi-view-stacked w-100 ${
-                activeTab === 'add' && 'text-white'
+                pathname === '/add' && 'text-white'
               }`}
               viewBox='0 0 16 16'
             >
