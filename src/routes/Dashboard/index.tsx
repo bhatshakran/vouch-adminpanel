@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <section className='d-flex'>
       <Sidebar />
-      <div>content</div>
+      <div></div>
     </section>
   );
 };
