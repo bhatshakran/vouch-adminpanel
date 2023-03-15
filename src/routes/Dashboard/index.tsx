@@ -5,9 +5,12 @@ import Sidebar from './Sidebar/Sidebar';
 
 const Dashboard = () => {
   return (
-    <section className='d-flex'>
+    <section className='d-flex '>
       <Sidebar />
-      <div style={{ backgroundColor: '#EAECF0' }} className='outl py-3'>
+      <div
+        style={{ backgroundColor: '#EAECF0' }}
+        className='outl py-3 overflow-scroll vh-100'
+      >
         <Navbar />
         <Outlet />
       </div>

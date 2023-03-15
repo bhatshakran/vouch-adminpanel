@@ -6,7 +6,11 @@ import Dashboard from './routes/Dashboard';
 import Login from './routes/Login';
 import './App.css';
 import Clients from './routes/Dashboard/Clients/Clients';
-import AddClient from './routes/Dashboard/Clients/AddClient';
+import AddClient from './routes/Dashboard/Clients/AddClient/AddClient';
+import CreateProfile from './routes/Dashboard/Clients/AddClient/CreateProfile';
+import PaymentSetup from './routes/Dashboard/Clients/AddClient/PaymentSetup';
+import ThemeSetup from './routes/Dashboard/Clients/AddClient/ThemeSetup';
+import ModulesSetup from './routes/Dashboard/Clients/AddClient/ModulesSetup';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +25,24 @@ const router = createBrowserRouter([
       {
         path: 'add',
         element: <AddClient />,
+        children: [
+          {
+            path: 'createprofile',
+            element: <CreateProfile />,
+          },
+          {
+            path: 'paymentsetup',
+            element: <PaymentSetup />,
+          },
+          {
+            path: 'themesetup',
+            element: <ThemeSetup />,
+          },
+          {
+            path: 'modulesetup',
+            element: <ModulesSetup />,
+          },
+        ],
       },
     ],
   },

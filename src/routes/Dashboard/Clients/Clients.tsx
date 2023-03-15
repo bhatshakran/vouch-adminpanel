@@ -77,7 +77,7 @@ const data = [
 const Clients = () => {
   return (
     <section>
-      <div className='mx-3'>
+      <div className='mx-3 '>
         <HeaderOfTable />
         <Table columns={columns} dataSource={data} />
       </div>

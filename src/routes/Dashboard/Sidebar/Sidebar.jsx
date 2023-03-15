@@ -4,11 +4,12 @@ import avatar from '../../../assets/Avatars.png';
 
 const Sidebar = () => {
   const { pathname } = useLocation();
+  console.log(pathname.split('/').includes('add'));
 
   return (
     <>
       <div
-        className='d-none d-lg-block bg-white  pt-4 position-relative vh-100'
+        className='d-none d-lg-block bg-white  pt-4 position-relative vh-100 overflow-hidden'
         style={{ width: '336px', fontFamily: 'Nunito Sans' }}
       >
         <div className='mx-4'>
@@ -61,7 +62,8 @@ const Sidebar = () => {
               to='/clients'
               role='button'
               className={`  px-4 py-2 rounded-3 my-0  ${
-                pathname === '/clients' && 'primarybg text-white shadow-sm'
+                pathname.split('/').includes('clients') &&
+                'primarybg text-white shadow-sm'
               }`}
               style={{
                 fontSize: '16px',
@@ -72,10 +74,11 @@ const Sidebar = () => {
               View Clients
             </Link>
             <Link
-              to='/add'
+              to='/add/createprofile'
               role='button'
               className={`px-4 py-2 rounded-3  my-0 ${
-                pathname === '/add' && 'primarybg text-white shadow-sm'
+                pathname.split('/').includes('add') &&
+                'primarybg text-white shadow-sm'
               }`}
               style={{
                 fontSize: '16px',
@@ -147,7 +150,7 @@ const Sidebar = () => {
           <Link
             to='/clients'
             className={`d-flex flex-column gap-2    py-2 my-0 ${
-              pathname === '/clients' && 'primarybg shadow-sm'
+              pathname.split('/').includes('clients') && 'primarybg shadow-sm'
             }  `}
           >
             <svg
@@ -156,7 +159,7 @@ const Sidebar = () => {
               height='25'
               fill='currentColor'
               className={`bi bi-view-stacked w-100 ${
-                pathname === '/clients' && 'text-white'
+                pathname.split('/').includes('clients') && 'text-white'
               }`}
               viewBox='0 0 16 16'
             >
@@ -165,9 +168,9 @@ const Sidebar = () => {
           </Link>
 
           <Link
-            to='/add'
+            to='/add/createprofile'
             className={`d-flex flex-column gap-2   py-2 my-0  ${
-              pathname === '/add' && 'primarybg shadow-sm'
+              pathname.split('/').includes('add') && 'primarybg shadow-sm'
             } `}
           >
             <svg
@@ -176,7 +179,7 @@ const Sidebar = () => {
               height='25'
               fill='currentColor'
               className={`bi bi-view-stacked w-100 ${
-                pathname === '/add' && 'text-white'
+                pathname.split('/').includes('add') && 'text-white'
               }`}
               viewBox='0 0 16 16'
             >
