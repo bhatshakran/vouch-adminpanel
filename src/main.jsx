@@ -5,11 +5,24 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './routes/Dashboard';
 import Login from './routes/Login';
 import './App.css';
+import Clients from './routes/Dashboard/Clients';
+import AddClient from './routes/Dashboard/AddClient';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Dashboard />,
+    children: [
+      {
+        path: 'clients',
+        element: <Clients />,
+      },
+
+      {
+        path: 'add',
+        element: <AddClient />,
+      },
+    ],
   },
   {
     path: '/login',

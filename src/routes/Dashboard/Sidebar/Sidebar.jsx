@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import avatar from '../../../assets/Avatars.png';
 
 const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState('clients');
+  const [activeTab, setActiveTab] = useState('');
   return (
     <>
       <div
@@ -55,20 +56,36 @@ const Sidebar = () => {
           </h4>
 
           <div className='d-flex flex-column gap-2'>
-            <p
+            <Link
+              to='/clients'
               role='button'
-              className='activeTab primarybg text-white px-4 py-2 rounded-3 my-0 shadow-sm'
-              style={{ fontSize: '16px' }}
+              className={`  px-4 py-2 rounded-3 my-0  ${
+                activeTab === 'clients' && 'primarybg text-white shadow-sm'
+              }`}
+              onClick={() => setActiveTab('clients')}
+              style={{
+                fontSize: '16px',
+                textDecoration: 'none',
+                color: '#B8BABC',
+              }}
             >
               View Clients
-            </p>
-            <p
+            </Link>
+            <Link
+              to='/add'
               role='button'
-              className='px-4 py-2 rounded-3 border my-0'
-              style={{ fontSize: '16px' }}
+              className={`px-4 py-2 rounded-3  my-0 ${
+                activeTab === 'add' && 'primarybg text-white shadow-sm'
+              }`}
+              style={{
+                fontSize: '16px',
+                textDecoration: 'none',
+                color: '#B8BABC',
+              }}
+              onClick={() => setActiveTab('add')}
             >
               Add Client
-            </p>
+            </Link>
           </div>
         </div>
 
@@ -128,8 +145,8 @@ const Sidebar = () => {
         </div>
 
         <div className=' mt-4'>
-          <div
-            role='button'
+          <Link
+            to='/clients'
             className={`d-flex flex-column gap-2    py-2 my-0 ${
               activeTab === 'clients' && 'primarybg shadow-sm'
             }  `}
@@ -147,10 +164,10 @@ const Sidebar = () => {
             >
               <path d='M3 0h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3zm0 8h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3z' />
             </svg>
-          </div>
+          </Link>
 
-          <div
-            role='button'
+          <Link
+            to='/add'
             className={`d-flex flex-column gap-2   py-2 my-0  ${
               activeTab === 'add' && 'primarybg shadow-sm'
             } `}
@@ -169,7 +186,7 @@ const Sidebar = () => {
               <path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z' />
               <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z' />
             </svg>
-          </div>
+          </Link>
         </div>
 
         <div className='position-absolute bottom-0 d-flex align-items-center justify-content-between w-100  py-2 pb-3 px-3'>
