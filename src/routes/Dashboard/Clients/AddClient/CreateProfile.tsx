@@ -77,7 +77,10 @@ const CreateProfile = () => {
                 />
               </svg>
             </span>
-            <span className='my-0 fw-bold' style={{ fontSize: '14px' }}>
+            <span
+              className='my-0 fw-bold secondarycolor'
+              style={{ fontSize: '14px' }}
+            >
               Reset
             </span>
           </button>

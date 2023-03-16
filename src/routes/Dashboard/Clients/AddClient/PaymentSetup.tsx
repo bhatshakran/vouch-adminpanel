@@ -32,7 +32,7 @@ const PaymentSetup = () => {
           </div>
         </div>
         {/* payment mode */}
-        <div className='container d-flex w-100 justify-content-between mt-4 flex-wrap gap-3'>
+        <div className='container d-flex w-100 justify-content-md-between justify-content-start mt-4 flex-wrap gap-3'>
           <div>
             <h2 className='nunito fw-bold' style={{ fontSize: '14px' }}>
               Payment Mode
@@ -90,7 +90,7 @@ const PaymentSetup = () => {
             </div>
           </div>
 
-          <div className='d-flex flex-column align-items-start'>
+          <div className='d-flex  flex-column align-items-start'>
             <h2 className='nunito fw-bold' style={{ fontSize: '14px' }}>
               Payment Status
             </h2>
@@ -149,7 +149,10 @@ const PaymentSetup = () => {
                 />
               </svg>
             </span>
-            <span className='my-0 fw-bold' style={{ fontSize: '14px' }}>
+            <span
+              className='my-0 fw-bold secondarycolor'
+              style={{ fontSize: '14px' }}
+            >
               Reset
             </span>
           </button>
