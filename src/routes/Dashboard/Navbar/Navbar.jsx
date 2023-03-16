@@ -16,8 +16,8 @@ const Navbar = () => {
         </h2>
         <p className='my-0' style={{ fontSize: '12px' }}>
           <span>Client Master /</span>
-          <span className='mx-1'>{linknameArr[1]}</span>
-          <span className='mx-1'>/{linknameArr[2]}</span>
+          <span className='mx-1'>{linknameArr[1]} /</span>
+          <span className=''>{linknameArr[2]}</span>
         </p>
       </div>
 
