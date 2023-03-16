@@ -39,6 +39,9 @@
   color: #686687 !important;
 }
 
+.lightbtnbg {
+  background-color: #f8f9fd !important;
+}
 .nunito {
   font-family: 'Nunito Sans' !important;
 }
@@ -165,6 +168,10 @@
 
 .f-20 {
   font-size: 20px !important;
+}
+
+.f-18 {
+  font-size: 18px !important;
 }
 .f-16 {
   font-size: 16px !important;

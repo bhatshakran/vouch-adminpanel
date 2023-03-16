@@ -6,7 +6,9 @@ const Header = () => {
   console.log(pathname.split('/').includes('add'));
   return (
     <div
-      className='bg-white d-flex flex-wrap   w-100 justify-content-start pt-4  nunito mt-4 rounded-top-3 shadow-sm '
+      className={`bg-white d-flex flex-wrap   w-100 justify-content-start pt-4  nunito mt-4 rounded-top-3 shadow-sm ${
+        pathname.split('/').includes('success') && 'd-none'
+      }`}
       style={{ color: '#939596' }}
     >
       <Link

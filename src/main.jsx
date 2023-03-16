@@ -11,6 +11,7 @@ import CreateProfile from './routes/Dashboard/Clients/AddClient/CreateProfile/Cr
 import PaymentSetup from './routes/Dashboard/Clients/AddClient/PaymentSetup/PaymentSetup';
 import ThemeSetup from './routes/Dashboard/Clients/AddClient/ThemeSetup/ThemeSetup';
 import ModulesSetup from './routes/Dashboard/Clients/AddClient/ModuleSetup/ModulesSetup';
+import Success from './routes/Dashboard/Clients/AddClient/Success/Success';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
           {
             path: 'modulesetup',
             element: <ModulesSetup />,
+          },
+          {
+            path: 'success',
+            element: <Success />,
           },
         ],
       },
