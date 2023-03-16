@@ -45,13 +45,13 @@
 
 @media only screen and (max-width: 992px) {
   .outl {
-    width: calc(100% - 80px) !important;
+    width: 100% !important;
   }
   .modulesidebar {
     width: 150px !important;
   }
   .modulesubmenu {
-    width: 100% !important;
+    width: calc(100%) !important;
   }
 }
 

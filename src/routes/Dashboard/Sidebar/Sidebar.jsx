@@ -130,7 +130,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div
-        className='d-block d-lg-none   pt-4 position-relative vh-100 overflow-hidden bg-white shadow-sm'
+        className='d-none   pt-4 position-relative vh-100 overflow-hidden bg-white shadow-sm'
         style={{ width: '80px', fontFamily: 'Nunito Sans' }}
       >
         <div className='' role='button'>
