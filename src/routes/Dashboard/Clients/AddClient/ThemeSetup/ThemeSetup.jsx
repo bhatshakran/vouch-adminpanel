@@ -12,7 +12,7 @@ const ThemeSetup = () => {
           </p>
         </div>
 
-        <div className='container mt-4'>
+        <div className='mx-3 mt-4'>
           <div
             className='position-relative border rounded-3 px-2 d-flex align-items-center'
             style={{ borderColor: '#e6e6e6' }}
@@ -54,7 +54,7 @@ const ThemeSetup = () => {
           <span className='nunito secondarycolor f-14 '>Add a hex color</span>
         </div>
 
-        <div className='container mt-4'>
+        <div className='mx-3 mt-4'>
           <div>
             <h4 className='nunito fw-bold my-0 f-16'>Login Theme</h4>
             <p className='nunito secondarycolor my-1 f-14'>
@@ -63,7 +63,7 @@ const ThemeSetup = () => {
           </div>
         </div>
 
-        <div className='container mt-3'>
+        <div className='mx-3 mt-3'>
           <div className='d-flex align-items-center gap-1 nunito f-14'>
             <input
               type='radio'
@@ -113,13 +113,13 @@ const ThemeSetup = () => {
           </div>
         </div>
 
-        <div className='container mt-4'>
+        <div className='mx-3 mt-4'>
           <div>
             <h4 className='nunito f-14 fw-bold'>
               Where Should be the login modal?
             </h4>
             {/* login modal position */}
-            <div className='d-flex gap-3 mt-3'>
+            <div className='d-flex flex-wrap gap-3 mt-3'>
               <div className='d-flex flex-column align-items-center gap-1'>
                 <div className='login-modal left-modal posleftmodal'></div>
                 <div className='d-flex align-items-center gap-1 nunito f-14'>
@@ -139,7 +139,7 @@ const ThemeSetup = () => {
                   <label htmlFor='right'>Right</label>
                 </div>
               </div>
-              <div className='d-flex flex-column align-items-center gap-1'>
+              <div className='d-flex  flex-column align-items-center gap-1'>
                 <div className='login-modal center-modal poscentermodal translate-x-middle'></div>
                 <div className='d-flex align-items-center gap-1 nunito f-14'>
                   <input
@@ -155,7 +155,7 @@ const ThemeSetup = () => {
           </div>
         </div>
 
-        <div className='mt-4 container d-flex flex-wrap gap-4 nunito'>
+        <div className='mt-4 mx-3 d-flex flex-wrap gap-4 nunito'>
           <button className='btn primarybg  text-white d-flex gap-2 align-items-center'>
             <span>Save & Continue</span>
             <span>

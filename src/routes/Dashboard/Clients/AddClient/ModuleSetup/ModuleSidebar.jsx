@@ -51,7 +51,7 @@ const ModuleSidebar = ({ renderSubmenu }) => {
             id='module3'
             name='module3'
             value='DailyTasks'
-            checked={submenuactive}
+            defaultChecked={submenuactive}
             className={`${submenuactive && 'whiteaccent'}`}
           />
           <div className='d-flex justify-content-between w-100'>

@@ -30,7 +30,7 @@ const CreateProfile = () => {
             </p>
           </div>
         </div>
-        <div className='container'>
+        <div className='mx-3'>
           <div className=' d-flex flex-wrap justify-content-between gap-1 '>
             <InputGroup placeholder='Company Name' />
             <InputGroup placeholder='Website' />
