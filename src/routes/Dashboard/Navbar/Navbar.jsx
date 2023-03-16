@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+  const linknameArr = pathname.split('/');
+
   return (
     <div
       style={{ height: '58px' }}
@@ -11,7 +15,9 @@ const Navbar = () => {
           View Clients
         </h2>
         <p className='my-0' style={{ fontSize: '12px' }}>
-          Client Master / View Clients
+          <span>Client Master /</span>
+          <span className='mx-1'>{linknameArr[1]}</span>
+          <span className='mx-1'>/{linknameArr[2]}</span>
         </p>
       </div>
 
