@@ -17,7 +17,11 @@ const SuccessCard = ({ img, disabled = false, headingTitle, clientTitle }) => {
       >
         <img src={img} alt='' />
       </div>
-      <h6 className='f-18 nunito bluishblack my-0'>{headingTitle}</h6>
+      <h6
+        className={`f-18 nunito bluishblack my-0 ${disabled && 'disabledbg'}`}
+      >
+        {headingTitle}
+      </h6>
       <p className='f-14 nunito secondarycolor'>{clientTitle}</p>
 
       <button

@@ -8,7 +8,7 @@ const PaymentSetup = () => {
       <div className='mt-3'>
         <div className='mx-3'>
           <h2
-            className='nunito my-0 fw-bold sm-f-18'
+            className='nunito my-0 fw-bold sm-f-18 bluishblack'
             style={{ fontSize: '20px' }}
           >
             Payment Setup
@@ -19,26 +19,55 @@ const PaymentSetup = () => {
         </div>
 
         <div className='mx-3'>
-          <div className=' d-flex flex-wrap justify-content-between gap-1 '>
-            <InputGroup placeholder='Billing Address' w='full' />
-            <SelectInput placeholder='Select State' required={true} />
-            <SelectInput />
-            <SelectInput />
-            <InputGroup placeholder='Select Number of Site Access' />
-            <InputGroup placeholder='Payable Amount per Site' />
-            <SelectInput />
-            <InputGroup placeholder='Discount(%)' />
-            <InputGroup placeholder='Reason' />
+          <div className=' d-flex flex-wrap justify-content-start  gap-1'>
+            <div className='w-100'>
+              <InputGroup placeholder='Billing Address' />
+            </div>
+            <div className='d-flex flex-column flex-lg-row   w-100  justify-content-between gap-1'>
+              <div className='w-50 lftinput'>
+                <SelectInput placeholder='Select State ' required={true} />
+              </div>
+              <div className='w-50 rghtinput d-flex gap-1 '>
+                <div className='w-75'>
+                  <SelectInput placeholder='Select City' required={true} />
+                </div>
+                <div className='mw-100'>
+                  <InputGroup placeholder='Pincode' required={true} />
+                </div>
+              </div>
+            </div>
+            <div className='w-100 d-flex gap-1 justify-content-between'>
+              <div className='w-50'>
+                <SelectInput
+                  placeholder='Select Number of Site Access'
+                  required={true}
+                />
+              </div>
+              <div className='w-50'>
+                <InputGroup placeholder='Payable Amount per Site' />
+              </div>
+            </div>
+            <div className='d-flex w-100 justify-content-between gap-1'>
+              <div className='w-50'>
+                <InputGroup placeholder='Discount(%)' required={true} />
+              </div>
+              <div className='w-50'>
+                <InputGroup placeholder='Reason' required={true} />
+              </div>
+            </div>
           </div>
         </div>
         {/* payment mode */}
         <div className='mx-3 d-flex  justify-content-md-between justify-content-start mt-4 flex-wrap gap-3'>
           <div>
-            <h2 className='nunito fw-bold' style={{ fontSize: '14px' }}>
+            <h2
+              className='nunito fw-bold bluishblack'
+              style={{ fontSize: '14px' }}
+            >
               Payment Mode
             </h2>
             <div
-              className='d-flex gap-4 flex-wrap'
+              className='d-flex gap-4 flex-wrap bluishblack'
               style={{ fontSize: '14px' }}
             >
               <div className='d-flex gap-1 nunito'>
@@ -90,7 +119,7 @@ const PaymentSetup = () => {
             </div>
           </div>
 
-          <div className='d-flex  flex-column align-items-start'>
+          <div className='d-flex  flex-column align-items-start bluishblack'>
             <h2 className='nunito fw-bold' style={{ fontSize: '14px' }}>
               Payment Status
             </h2>

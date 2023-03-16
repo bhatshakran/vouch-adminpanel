@@ -110,6 +110,13 @@
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .lftinput,
+  .rghtinput {
+    width: 100% !important;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .sm-gap-1 {
     gap: 5px !important;
@@ -121,6 +128,9 @@
 
   .sm-f-18 {
     font-size: 18px !important;
+  }
+  .sm-w-100 {
+    width: 100% !important;
   }
 }
 
@@ -134,15 +144,6 @@
   width: 48% !important;
 }
 
-/*  */
-/* .addred > option[selected]:after { */
-/* content: '*' !important; */
-/* } */
-/*  */
-/* .addred > option::placeholder { */
-/* content: '*' !important; */
-/* color: red !important; */
-/* } */
 .colorpickerinput:focus {
   outline: none;
   box-shadow: none;
@@ -252,4 +253,21 @@ input {
 
 .mobilesidbar {
   z-index: 100;
+}
+
+.addred {
+  position: relative;
+}
+
+.ablabel {
+  position: absolute;
+  top: 50%;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-20 {
+  width: 18% !important;
 }
