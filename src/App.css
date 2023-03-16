@@ -38,7 +38,20 @@
 .secondarycolor {
   color: #686687 !important;
 }
+.disabledbg {
+  background-color: #f5f5f5;
+}
 
+.disabledcolor {
+  color: #e8e7e7;
+}
+
+.disabledbtn {
+  background-color: #e6e6e6;
+}
+.rdimgbg {
+  background-color: #f5f5f7 !important;
+}
 .lightbtnbg {
   background-color: #f8f9fd !important;
 }
@@ -238,5 +251,5 @@ input {
 }
 
 .mobilesidbar {
-  z-index: 10;
+  z-index: 100;
 }
