@@ -47,10 +47,28 @@
   .outl {
     width: calc(100% - 80px) !important;
   }
+  .modulesidebar {
+    width: 150px !important;
+  }
+  .modulesubmenu {
+    width: 100% !important;
+  }
 }
+
+.modulesidebar {
+  width: 268px;
+}
+.modulesubmenu {
+  width: calc(100% - 268px);
+}
+
 @media only screen and (min-width: 768px) {
   .login-left {
     width: 400px !important;
+  }
+
+  .md-g-0 {
+    gap: 1 !important;
   }
 }
 
@@ -188,4 +206,16 @@
 .poscentermodal::after {
   left: 44px;
   top: 22px;
+}
+
+input {
+  accent-color: #1334b3 !important;
+}
+
+.whiteaccent {
+  accent-color: white !important;
+}
+
+.bluishblack {
+  color: #030037 !important;
 }

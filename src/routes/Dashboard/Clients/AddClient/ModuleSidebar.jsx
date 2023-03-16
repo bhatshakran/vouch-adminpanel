@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const ModuleSidebar = () => {
+const ModuleSidebar = ({ renderSubmenu }) => {
+  const submenuhanlderRef = useRef(null);
+  const [submenuactive, setSubmenuActive] = useState(true);
+
+  useEffect(() => {
+    if (submenuhanlderRef.current.checked) {
+      setSubmenuActive(true);
+      renderSubmenu();
+    } else setSubmenuActive(false);
+  }, []);
+
+  const showSubMenu = () => {
+    setSubmenuActive(!submenuactive);
+    renderSubmenu();
+  };
+
   return (
-    <div className='mx-3 mt-2' style={{ width: '268px' }}>
+    <div className='mx-3 mt-2 modulesidebar'>
       <div
         className='d-flex flex-column gap-4 flex-wrap'
         style={{ fontSize: '14px' }}
@@ -24,12 +39,20 @@ const ModuleSidebar = () => {
           <input type='checkbox' id='module8' name='module8' value='Assets' />
           <label htmlFor='module8'> Assets</label>
         </div>
-        <div className='d-flex gap-3  align-items-center nunito  primarybg p-2 text-white rounded-3 px-3'>
+        <div
+          className={`d-flex gap-3  align-items-center  nunito modulehandler ${
+            submenuactive && 'primarybg p-2 text-white rounded-3 px-3 '
+          }`}
+        >
           <input
+            ref={submenuhanlderRef}
+            onClick={showSubMenu}
             type='checkbox'
             id='module3'
             name='module3'
             value='DailyTasks'
+            checked={submenuactive}
+            className={`${submenuactive && 'whiteaccent'}`}
           />
           <div className='d-flex justify-content-between w-100'>
             <div>
