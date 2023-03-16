@@ -10,11 +10,25 @@ const Success = () => {
     <section>
       <SuccessMsg />
       <section className='d-flex flex-wrap gap-2 mt-3 justify-content-center justify-content-lg-start'>
-        <SuccessCard img={iss} />
-        <SuccessCard img={infosys} />
-        <SuccessCard img={sites} />
-        <SuccessCard img={sites} disabled={true} />
-        <SuccessCard img={sites} disabled={true} />
+        <SuccessCard
+          clientTitle='4 Clients'
+          headingTitle='ISS Facility Services'
+          img={iss}
+        />
+        <SuccessCard clientTitle='--' headingTitle='Infosys' img={infosys} />
+        <SuccessCard clientTitle='--' headingTitle='Sites' img={sites} />
+        <SuccessCard
+          clientTitle='--'
+          headingTitle='Tenant Groups'
+          img={sites}
+          disabled={true}
+        />
+        <SuccessCard
+          clientTitle='--'
+          headingTitle='Tenants'
+          img={sites}
+          disabled={true}
+        />
       </section>
     </section>
   );

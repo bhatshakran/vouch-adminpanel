@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ModuleSidebar from './ModuleSidebar';
 import SubMenu from './SubMenu';
 
@@ -26,7 +27,10 @@ const ModulesSetup = () => {
           {rendersubmenu && <SubMenu />}
         </div>
         <div className='mt-5 mx-3 d-flex flex-wrap gap-4 nunito'>
-          <button className='btn primarybg  text-white d-flex gap-2 align-items-center'>
+          <Link
+            to='/add/success'
+            className='btn primarybg  text-white d-flex gap-2 align-items-center'
+          >
             <span>Save & Continue</span>
             <span>
               <svg
@@ -42,7 +46,7 @@ const ModulesSetup = () => {
                 />
               </svg>
             </span>
-          </button>
+          </Link>
           <button className='btn primarycolor  text-white d-flex gap-2 align-items-end'>
             <span className='my-0'>
               <svg

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SuccessCard = ({ img, disabled = false }) => {
+const SuccessCard = ({ img, disabled = false, headingTitle, clientTitle }) => {
   return (
     <article
       className={` rounded-3 shadow-sm d-flex align-items-center justify-content-center flex-column px-3 gap-2 ${
@@ -17,8 +17,8 @@ const SuccessCard = ({ img, disabled = false }) => {
       >
         <img src={img} alt='' />
       </div>
-      <h6 className='f-18 nunito bluishblack my-0'>ISS Facility Services</h6>
-      <p className='f-14 nunito secondarycolor'>4 Clients</p>
+      <h6 className='f-18 nunito bluishblack my-0'>{headingTitle}</h6>
+      <p className='f-14 nunito secondarycolor'>{clientTitle}</p>
 
       <button
         className={`btn  w-100 nunito   py-2 ${
