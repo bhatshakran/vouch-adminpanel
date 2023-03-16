@@ -3,8 +3,8 @@ import React from 'react';
 const HeaderOfTable = () => {
   return (
     <section className='bg-white rounded-top-3 shadow-sm '>
-      <div className='d-flex justify-content-between px-3 align-items-center py-3'>
-        <div className=' w-25 input-group  border rounded-pill px-3 '>
+      <div className='d-flex  flex-sm-wrap gap-2 justify-content-between px-3 align-items-center py-3 py-3'>
+        <div className=' lg-w-25  input-group  border rounded-pill px-3 '>
           <span
             className='input-group-text bg-white border-0 '
             id='basic-addon1'
@@ -33,7 +33,7 @@ const HeaderOfTable = () => {
             }}
           />
         </div>
-        <section className='d-flex gap-5'>
+        <section className='d-flex  gap-3'>
           <div
             className='border rounded-3 p-2 d-flex gap-3'
             style={{ borderColor: '#e6e6e6', color: '#8E96A0' }}
