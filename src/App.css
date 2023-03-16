@@ -90,6 +90,9 @@
 
 .ant-table-thead .ant-table-cell {
   background-color: #eaecf0 !important;
+  font-family: 'Nunito Sans' !important;
+  font-size: 12px;
+  color: #030037;
 }
 .rounded-top-3 {
   border-top-left-radius: 8px;
