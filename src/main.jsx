@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './routes/Dashboard';
-import Login from './routes/Login';
+import Login, { action as loginAction } from './routes/Login';
 import './App.css';
 import Clients from './routes/Dashboard/Clients/Clients';
 import AddClient from './routes/Dashboard/Clients/AddClient/AddClient';
@@ -53,6 +53,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/login',
+    action: loginAction,
     element: <Login />,
   },
 ]);

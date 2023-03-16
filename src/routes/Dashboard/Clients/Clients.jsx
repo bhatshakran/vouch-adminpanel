@@ -1,8 +1,7 @@
-import { Space, Switch, Table } from 'antd';
+import { Table } from 'antd';
 import { Dropdown } from 'antd';
 import React, { useState } from 'react';
 import HeaderOfTable from './TableHeader/HeaderOfTable';
-import { BiDotsVerticalRounded } from 'react-icons/bi';
 import infosys from '../../../assets/infosys.png';
 import wipro from '../../../assets/wipro.png';
 import accenture from '../../../assets/accenture.png';
@@ -13,6 +12,13 @@ import lodha from '../../../assets/lodha.png';
 import cape from '../../../assets/cape.png';
 import tat from '../../../assets/tat.png';
 import mphasis from '../../../assets/mphasis.png';
+import {
+  DeleteOutlined,
+  EditOutlined,
+  EyeOutlined,
+  MoreOutlined,
+  StopOutlined,
+} from '@ant-design/icons';
 
 const avatarArr = [
   infosys,
@@ -30,11 +36,23 @@ const avatarArr = [
 const items = [
   {
     key: '1',
-    label: 'Action 1',
+    label: <div className='bluishblack nunito'>View Details</div>,
+    icon: <EyeOutlined style={{ color: '#030037' }} />,
   },
   {
     key: '2',
-    label: 'Action 2',
+    label: <div className='bluishblack nunito'>Edit</div>,
+    icon: <EditOutlined style={{ color: '#030037' }} />,
+  },
+  {
+    key: '3',
+    label: <div className='bluishblack nunito'>Block Access</div>,
+    icon: <StopOutlined style={{ color: '#030037' }} />,
+  },
+  {
+    key: '4',
+    label: <div className='bluishblack nunito'>Delete</div>,
+    icon: <DeleteOutlined style={{ color: '#030037' }} />,
   },
 ];
 
@@ -106,7 +124,7 @@ const columns = [
           }}
         >
           <span role='button'>
-            <BiDotsVerticalRounded />
+            <MoreOutlined />
           </span>
         </Dropdown>
       </div>
@@ -231,7 +249,6 @@ const data = [
 ];
 
 const Clients = () => {
-  const [fixedTop, setFixedTop] = useState(false);
   return (
     <section>
       <div className='mx-3  nunito'>
@@ -242,27 +259,6 @@ const Clients = () => {
           scroll={{
             x: 1300,
           }}
-          /*  summary={() => (
-            <Table.Summary fixed={fixedTop ? 'top' : 'bottom'}>
-              {/* <Table.Summary.Row>
-                <Table.Summary.Cell index={0} colSpan={2}>
-                  <Switch
-                    checkedChildren='Fixed Top'
-                    unCheckedChildren='Fixed Top'
-                    checked={fixedTop}
-                    onChange={() => {
-                      setFixedTop(!fixedTop);
-                    }}
-                  />
-                </Table.Summary.Cell>
-                <Table.Summary.Cell index={2} colSpan={8}>
-                  Scroll Context
-                </Table.Summary.Cell>
-                <Table.Summary.Cell index={10}>Fix Right</Table.Summary.Cell>
-              </Table.Summary.Row> */
-          // </Table.Summary>
-          // )}
-          // sticky */
         />
       </div>
     </section>

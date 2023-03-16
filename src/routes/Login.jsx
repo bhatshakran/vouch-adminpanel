@@ -1,11 +1,50 @@
+import axios from 'axios';
 import React from 'react';
+import { Form, redirect, useActionData } from 'react-router-dom';
 import rectbg from '../assets/rectbg.png';
 import rectfront from '../assets/rectfront.png';
 
+export async function action({ request, params }) {
+  const formData = await request.formData();
+  const email = formData.get('username');
+  const password = formData.get('password');
+  const errors = {};
+
+  // validate the fields
+  if (typeof email !== 'string' || !email.includes('@')) {
+    errors.email = "That doesn't look like an email address";
+  }
+
+  if (typeof password !== 'string' || password.length < 6) {
+    errors.password = 'Password must be > 6 characters';
+  }
+
+  if (Object.keys(errors).length) {
+    return errors;
+  }
+
+  try {
+    const res = await axios.post('https://reqres.in/api/login', {
+      email: username,
+      password: password,
+    });
+    console.log(res.data.token);
+    return redirect('/clients');
+  } catch (error) {
+    return error.message;
+  }
+}
+
 const Login = () => {
+  let errors = useActionData();
+
   return (
     <section className='d-flex align-items-center justify-content-center'>
-      <div className='w-100 lg:w-50 vh-100 d-flex align-items-center justify-content-center position-relative px-5'>
+      <Form
+        action='/login'
+        method='post'
+        className='w-100 lg:w-50 vh-100 d-flex align-items-center justify-content-center position-relative px-5'
+      >
         <div className='text-center w-100'>
           <h2
             className='fs-1 fw-bold'
@@ -20,6 +59,12 @@ const Login = () => {
           >
             Enter your Username and Password{' '}
           </h6>
+
+          {errors && (
+            <span className='text-danger nunito f-12 fw-bold'>
+              Kindly check your details
+            </span>
+          )}
 
           <div className='mt-4 w-100'>
             <div className='input-group mb-3'>
@@ -45,6 +90,7 @@ const Login = () => {
                 type='text'
                 className='form-control border-start-0 px-0 myinput'
                 placeholder='Username'
+                name='username'
                 aria-label='Username'
                 aria-describedby='basic-addon1'
                 style={{
@@ -52,6 +98,14 @@ const Login = () => {
                   borderColor: '#e6e6e6',
                 }}
               />
+              {errors?.email && (
+                <span
+                  className='text-danger fw-bold  w-100'
+                  style={{ fontSize: '12px' }}
+                >
+                  {errors.email}
+                </span>
+              )}
             </div>
             <div className='input-group mb-3'>
               <span
@@ -77,12 +131,21 @@ const Login = () => {
                 className='form-control border-start-0 px-0 myinput'
                 placeholder='Password'
                 aria-label='Password'
+                name='password'
                 aria-describedby='basic-addon1'
                 style={{ color: 'black', borderColor: '#e6e6e6' }}
               />
+              {errors?.password && (
+                <span
+                  className='text-danger fw-bold  w-100'
+                  style={{ fontSize: '12px' }}
+                >
+                  {errors.password}
+                </span>
+              )}
             </div>
             <div>
-              <button type='button' className='btn primarybg w-100 text-white'>
+              <button type='submit' className='btn primarybg w-100 text-white'>
                 {' '}
                 Login
               </button>
@@ -107,7 +170,7 @@ const Login = () => {
           </div>
           <div>© Punctualiti 2022. All rights reserved</div>
         </div>
-      </div>
+      </Form>
       <div className='w-100 lg:w-50 vh-100  px-5  login-right d-none d-sm-none d-md-none d-lg-flex flex-column justify-content-center'>
         <div className='position-relative w-100 d-flex align-items-center justify-content-center '>
           <img src={rectbg} alt='' className='w-100' />
