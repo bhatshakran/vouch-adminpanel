@@ -7,10 +7,10 @@ import Login from './routes/Login';
 import './App.css';
 import Clients from './routes/Dashboard/Clients/Clients';
 import AddClient from './routes/Dashboard/Clients/AddClient/AddClient';
-import CreateProfile from './routes/Dashboard/Clients/AddClient/CreateProfile';
-import PaymentSetup from './routes/Dashboard/Clients/AddClient/PaymentSetup';
-import ThemeSetup from './routes/Dashboard/Clients/AddClient/ThemeSetup';
-import ModulesSetup from './routes/Dashboard/Clients/AddClient/ModulesSetup';
+import CreateProfile from './routes/Dashboard/Clients/AddClient/CreateProfile/CreateProfile';
+import PaymentSetup from './routes/Dashboard/Clients/AddClient/PaymentSetup/PaymentSetup';
+import ThemeSetup from './routes/Dashboard/Clients/AddClient/ThemeSetup/ThemeSetup';
+import ModulesSetup from './routes/Dashboard/Clients/AddClient/ModuleSetup/ModulesSetup';
 
 const router = createBrowserRouter([
   {

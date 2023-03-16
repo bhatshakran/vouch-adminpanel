@@ -11,7 +11,7 @@ const Header = () => {
     >
       <Link
         to='/add/createprofile'
-        className={`w-50 mb-4 lg-mb-0 lg-w-25 d-flex justify-content-center pb-4 ${
+        className={`w-50 mb-4 lg-mb-0 lg-w-25 d-flex px-3 justify-content-start justify-content-lg-center  pb-4 ${
           pathname.split('/').includes('createprofile') &&
           'primarycolor primaryborder'
         } `}
@@ -27,7 +27,7 @@ const Header = () => {
       </Link>
       <Link
         to='/add/paymentsetup'
-        className={`w-50 lg-w-25 mb-4 lg-mb-0 pb-2 d-flex justify-content-center ${
+        className={`w-50 lg-w-25 mb-4 lg-mb-0 pb-2 d-flex px-3 justify-content-start justify-content-lg-center ${
           pathname.split('/').includes('paymentsetup') &&
           'primarycolor primaryborder'
         }`}
@@ -43,7 +43,7 @@ const Header = () => {
       </Link>
       <Link
         to='/add/themesetup'
-        className={`w-50 lg-w-25 mb-4  lg-mb-0 pb-2 d-flex justify-content-center ${
+        className={`w-50 lg-w-25 mb-4  lg-mb-0 pb-2 d-flex px-3 justify-content-start justify-content-lg-center ${
           pathname.split('/').includes('themesetup') &&
           'primarycolor primaryborder'
         }`}
@@ -59,7 +59,7 @@ const Header = () => {
       </Link>
       <Link
         to='/add/modulesetup'
-        className={`w-50 lg-w-25 mb-4  lg-mb-0 pb-2 d-flex justify-content-center ${
+        className={`w-50 lg-w-25 mb-4  lg-mb-0 pb-2 d-flex px-3 justify-content-start justify-content-lg-center ${
           pathname.split('/').includes('modulesetup') &&
           'primarycolor primaryborder'
         }`}

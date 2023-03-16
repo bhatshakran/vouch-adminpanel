@@ -1,7 +1,7 @@
 import React from 'react';
-import InputGroup from '../../../../components/InputGroup';
-import SelectInput from '../../../../components/SelectInput';
-import add from './images/addcom.png';
+import InputGroup from '../../../../../components/InputGroup';
+import SelectInput from '../../../../../components/SelectInput';
+import add from '../images/addcom.png';
 
 const CreateProfile = () => {
   return (

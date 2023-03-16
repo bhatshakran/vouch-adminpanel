@@ -1,6 +1,6 @@
 import React from 'react';
-import InputGroup from '../../../../components/InputGroup';
-import SelectInput from '../../../../components/SelectInput';
+import InputGroup from '../../../../../components/InputGroup';
+import SelectInput from '../../../../../components/SelectInput';
 
 const PaymentSetup = () => {
   return (

@@ -1,6 +1,6 @@
 import { Space, Table, Tag } from 'antd';
 import React from 'react';
-import HeaderOfTable from './HeaderOfTable';
+import HeaderOfTable from './TableHeader/HeaderOfTable';
 
 const columns = [
   {
