@@ -32,34 +32,34 @@ const CreateProfile = () => {
         </div>
         <div className='mx-3'>
           <div className=' d-flex flex-wrap justify-content-between gap-1 w-100'>
-            <div className='d-flex w-100 justify-content-between gap-1'>
-              <div className='w-50'>
+            <div className='d-flex flex-column flex-lg-row w-100 justify-content-between gap-1'>
+              <div className=' w-50 lftinput'>
                 <InputGroup placeholder='Company Name' required={true} />
               </div>
-              <div className='w-50'>
+              <div className=' w-50 rghtinput'>
                 <InputGroup placeholder='Website' />
               </div>
             </div>
 
-            <div className='d-flex w-100 justify-content-between gap-1'>
-              <div className='w-50'>
+            <div className='d-flex flex-column flex-lg-row w-100 justify-content-between gap-1'>
+              <div className='w-50 lftinput'>
                 <SelectInput required={true} />
               </div>
-              <div className='w-50'>
+              <div className='w-50 rghtinput'>
                 <SelectInput
                   placeholder='Select Facility Management Company'
                   required={true}
                 />
               </div>
             </div>
-            <div className='d-flex w-100 justify-content-between gap-1'>
-              <div className='w-50'>
+            <div className='d-flex w-100 flex-column flex-lg-row justify-content-between gap-1'>
+              <div className='w-50 lftinput'>
                 <InputGroup
                   placeholder='Company Email Address'
                   required={true}
                 />
               </div>
-              <div className='w-50'>
+              <div className='w-50 rghtinput'>
                 <InputGroup placeholder='Mobile Number' required={true} />
               </div>
             </div>
@@ -77,11 +77,11 @@ const CreateProfile = () => {
                 </div>
               </div>
             </div>
-            <div className='d-flex w-100 justify-content-between gap-1'>
-              <div className='w-50'>
+            <div className='d-flex w-100 flex-column flex-lg-row justify-content-between gap-1'>
+              <div className='w-50 lftinput'>
                 <InputGroup placeholder='GST Number' required={true} />
               </div>
-              <div className='w-50'>
+              <div className='w-50 rghtinput'>
                 <InputGroup placeholder='Fax Number' />
               </div>
             </div>

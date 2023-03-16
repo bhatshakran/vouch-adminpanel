@@ -27,31 +27,31 @@ const PaymentSetup = () => {
               <div className='w-50 lftinput'>
                 <SelectInput placeholder='Select State ' required={true} />
               </div>
-              <div className='w-50 rghtinput d-flex gap-1 '>
-                <div className='w-75'>
+              <div className='w-50 rghtinput d-flex flex-column flex-lg-row gap-1 '>
+                <div className='w-75 lftinput'>
                   <SelectInput placeholder='Select City' required={true} />
                 </div>
-                <div className='mw-100'>
+                <div className='rghtinput'>
                   <InputGroup placeholder='Pincode' required={true} />
                 </div>
               </div>
             </div>
-            <div className='w-100 d-flex gap-1 justify-content-between'>
-              <div className='w-50'>
+            <div className='w-100 d-flex flex-column flex-lg-row gap-1 justify-content-between'>
+              <div className='w-50 lftinput'>
                 <SelectInput
                   placeholder='Select Number of Site Access'
                   required={true}
                 />
               </div>
-              <div className='w-50'>
+              <div className='w-50 rghtinput'>
                 <InputGroup placeholder='Payable Amount per Site' />
               </div>
             </div>
-            <div className='d-flex w-100 justify-content-between gap-1'>
-              <div className='w-50'>
+            <div className='d-flex w-100 flex-column flex-lg-row justify-content-between gap-1'>
+              <div className='w-50 lftinput'>
                 <InputGroup placeholder='Discount(%)' required={true} />
               </div>
-              <div className='w-50'>
+              <div className='w-50 rghtinput'>
                 <InputGroup placeholder='Reason' required={true} />
               </div>
             </div>
