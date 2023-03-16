@@ -10,6 +10,8 @@ export async function action({ request, params }) {
   const password = formData.get('password');
   const errors = {};
 
+  console.log(email);
+
   // validate the fields
   if (typeof email !== 'string' || !email.includes('@')) {
     errors.email = "That doesn't look like an email address";
@@ -25,10 +27,12 @@ export async function action({ request, params }) {
 
   try {
     const res = await axios.post('https://reqres.in/api/login', {
-      email: username,
+      email: email,
       password: password,
     });
+    console.log(res);
     console.log(res.data.token);
+    localStorage.setItem('token', res.data.token);
     return redirect('/clients');
   } catch (error) {
     return error.message;
@@ -59,12 +63,6 @@ const Login = () => {
           >
             Enter your Username and Password{' '}
           </h6>
-
-          {errors && (
-            <span className='text-danger nunito f-12 fw-bold'>
-              Kindly check your details
-            </span>
-          )}
 
           <div className='mt-4 w-100'>
             <div className='input-group mb-3'>
@@ -100,7 +98,7 @@ const Login = () => {
               />
               {errors?.email && (
                 <span
-                  className='text-danger fw-bold  w-100'
+                  className='text-danger fw-bold  w-100 text-start'
                   style={{ fontSize: '12px' }}
                 >
                   {errors.email}
@@ -127,7 +125,7 @@ const Login = () => {
                 </svg>
               </span>
               <input
-                type='text'
+                type='password'
                 className='form-control border-start-0 px-0 myinput'
                 placeholder='Password'
                 aria-label='Password'
@@ -137,7 +135,7 @@ const Login = () => {
               />
               {errors?.password && (
                 <span
-                  className='text-danger fw-bold  w-100'
+                  className='text-danger fw-bold  w-100 text-start'
                   style={{ fontSize: '12px' }}
                 >
                   {errors.password}
