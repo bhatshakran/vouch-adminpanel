@@ -32,7 +32,7 @@ const PaymentSetup = () => {
           </div>
         </div>
         {/* payment mode */}
-        <div className='container d-flex w-100 justify-content-md-between justify-content-start mt-4 flex-wrap gap-3'>
+        <div className='mx-3 d-flex  justify-content-md-between justify-content-start mt-4 flex-wrap gap-3'>
           <div>
             <h2 className='nunito fw-bold' style={{ fontSize: '14px' }}>
               Payment Mode
@@ -116,7 +116,7 @@ const PaymentSetup = () => {
           </div>
         </div>
 
-        <div className='mt-5 container d-flex flex-wrap gap-4 nunito'>
+        <div className='mt-5 mx-3 d-flex flex-wrap gap-4 nunito'>
           <button className='btn primarybg  text-white d-flex gap-2 align-items-center'>
             <span>Save & Continue</span>
             <span>

@@ -44,7 +44,7 @@ const CreateProfile = () => {
           </div>
         </div>
 
-        <div className='mt-3 container d-flex flex-wrap gap-4 nunito'>
+        <div className='mt-3 mx-3 d-flex flex-wrap gap-4 nunito'>
           <button className='btn primarybg  text-white d-flex gap-2 align-items-center'>
             <span>Save & Continue</span>
             <span>

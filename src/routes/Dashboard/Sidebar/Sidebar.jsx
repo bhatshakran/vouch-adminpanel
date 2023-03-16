@@ -161,8 +161,8 @@ const Sidebar = () => {
       {/* mobile sidebar */}
       {mobileNav && (
         <div
-          className=' bg-white position-fixed left-0 top-0  pt-4  vh-100 overflow-hidden mobilesidbar'
-          style={{ width: '336px', fontFamily: 'Nunito Sans' }}
+          className=' bg-white d-lg-none position-fixed left-0 top-0  pt-4  vh-100 overflow-hidden mobilesidbar'
+          style={{ width: '250px', fontFamily: 'Nunito Sans' }}
         >
           <div className='mx-4'>
             <h2 className='fs-5 fw-bold'>Company name</h2>
