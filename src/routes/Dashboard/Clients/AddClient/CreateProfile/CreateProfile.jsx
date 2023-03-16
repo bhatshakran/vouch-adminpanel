@@ -31,16 +31,60 @@ const CreateProfile = () => {
           </div>
         </div>
         <div className='mx-3'>
-          <div className=' d-flex flex-wrap justify-content-between gap-1 '>
-            <InputGroup placeholder='Company Name' />
-            <InputGroup placeholder='Website' />
-            <SelectInput />
-            <SelectInput />
-            <InputGroup placeholder='Company Email Address' />
-            <InputGroup placeholder='Mobile Number' />
-            <SelectInput />
-            <SelectInput />
-            <InputGroup placeholder='GST Number' />
+          <div className=' d-flex flex-wrap justify-content-between gap-1 w-100'>
+            <div className='d-flex w-100 justify-content-between gap-1'>
+              <div className='w-50'>
+                <InputGroup placeholder='Company Name' required={true} />
+              </div>
+              <div className='w-50'>
+                <InputGroup placeholder='Website' />
+              </div>
+            </div>
+
+            <div className='d-flex w-100 justify-content-between gap-1'>
+              <div className='w-50'>
+                <SelectInput required={true} />
+              </div>
+              <div className='w-50'>
+                <SelectInput
+                  placeholder='Select Facility Management Company'
+                  required={true}
+                />
+              </div>
+            </div>
+            <div className='d-flex w-100 justify-content-between gap-1'>
+              <div className='w-50'>
+                <InputGroup
+                  placeholder='Company Email Address'
+                  required={true}
+                />
+              </div>
+              <div className='w-50'>
+                <InputGroup placeholder='Mobile Number' required={true} />
+              </div>
+            </div>
+
+            <div className='d-flex flex-column flex-lg-row   w-100  justify-content-between gap-1'>
+              <div className='w-50 lftinput'>
+                <SelectInput placeholder='Select State ' required={true} />
+              </div>
+              <div className='w-50 rghtinput d-flex gap-1 '>
+                <div className='w-75'>
+                  <SelectInput placeholder='Select City' required={true} />
+                </div>
+                <div className='mw-100'>
+                  <InputGroup placeholder='Pincode' required={true} />
+                </div>
+              </div>
+            </div>
+            <div className='d-flex w-100 justify-content-between gap-1'>
+              <div className='w-50'>
+                <InputGroup placeholder='GST Number' required={true} />
+              </div>
+              <div className='w-50'>
+                <InputGroup placeholder='Fax Number' />
+              </div>
+            </div>
           </div>
         </div>
 
