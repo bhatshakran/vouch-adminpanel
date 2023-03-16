@@ -10,8 +10,6 @@ export async function action({ request, params }) {
   const password = formData.get('password');
   const errors = {};
 
-  console.log(email);
-
   // validate the fields
   if (typeof email !== 'string' || !email.includes('@')) {
     errors.email = "That doesn't look like an email address";
