@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SuccessMsg = () => {
   return (
     <div className='bg-white py-3 px-3 mt-2 rounded-3 shadow-sm'>
-      <div className='d-flex flex-wrap align-items-center justify-content-between'>
+      <div className='d-flex gap-3 flex-wrap align-items-center justify-content-between'>
         <div className='d-flex gap-3 align-items-center'>
           <div>
             <svg
