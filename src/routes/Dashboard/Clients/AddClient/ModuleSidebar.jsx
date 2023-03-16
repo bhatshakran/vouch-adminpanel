@@ -17,11 +17,8 @@ const ModuleSidebar = ({ renderSubmenu }) => {
   };
 
   return (
-    <div className='mx-3 mt-2 modulesidebar'>
-      <div
-        className='d-flex flex-column gap-4 flex-wrap'
-        style={{ fontSize: '14px' }}
-      >
+    <div className='mx-3 mt-2 modulesidebar bluishblack'>
+      <div className='d-flex flex-column gap-4 flex-wrap f-14 '>
         <div className='d-flex gap-3  align-items-center nunito'>
           <input
             type='checkbox'
@@ -29,7 +26,10 @@ const ModuleSidebar = ({ renderSubmenu }) => {
             name='module1'
             value='Home / Dashboard'
           />
-          <label htmlFor='module1'> Home / Dashboard</label>
+          <label htmlFor='module1' className=''>
+            {' '}
+            Home / Dashboard
+          </label>
         </div>
         <div className='d-flex gap-3  align-items-center nunito'>
           <input type='checkbox' id='module2' name='module2' value='Helpdesk' />

@@ -63,8 +63,8 @@ const SubMenu = () => {
         </div>
         <hr />
 
-        <div className='bluishblack'>
-          <div className='d-flex gap-3  align-items-center nunito'>
+        <div className='bluishblack f-14'>
+          <div className='d-flex gap-3  align-items-center nunito '>
             <input
               type='checkbox'
               id='module1'

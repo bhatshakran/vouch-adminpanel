@@ -44,7 +44,8 @@ const Header = () => {
       <Link
         to='/add/themesetup'
         className={`w-50 lg-w-25 mb-4  lg-mb-0 pb-2 d-flex justify-content-center ${
-          pathname.split('/').includes('themesetup') && ' primaryborder'
+          pathname.split('/').includes('themesetup') &&
+          'primarycolor primaryborder'
         }`}
         style={{ textDecoration: 'none', color: '#939596' }}
       >
