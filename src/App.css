@@ -226,3 +226,17 @@ input {
 .bluishblack {
   color: #030037 !important;
 }
+
+.slider {
+  top: 40px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.displacedSlider {
+  left: 336px;
+}
+
+.mobilesidbar {
+  z-index: 10;
+}

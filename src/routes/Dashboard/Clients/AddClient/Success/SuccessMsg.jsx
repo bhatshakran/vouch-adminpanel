@@ -13,6 +13,7 @@ const SuccessMsg = () => {
               viewBox='0 0 32 32'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
+              className='my-0'
             >
               <rect width='32' height='32' rx='16' fill='#12B690' />
               <path
@@ -29,24 +30,22 @@ const SuccessMsg = () => {
           </div>
         </div>
         <div className=' d-flex flex-wrap gap-4 nunito'>
-          <button className='btn lightbtnbg fw-bold  primarycolor d-flex gap-2 align-items-center f-14 shadow-sm'>
-            <Link
-              to='/clients/'
-              className='bluishblack'
-              style={{ textDecoration: 'none' }}
-            >
+          <Link
+            to='/clients/'
+            className='btn lightbtnbg fw-bold  primarycolor d-flex gap-2 align-items-center f-14 shadow-sm'
+          >
+            <span className='bluishblack' style={{ textDecoration: 'none' }}>
               Go to Client Master
-            </Link>
-          </button>
-          <button className='btn primarybg  text-white d-flex gap-2 align-items-center f-14 shadow-sm'>
-            <Link
-              to='/add/createprofile'
-              className='text-white'
-              style={{ textDecoration: 'none' }}
-            >
+            </span>
+          </Link>
+          <Link
+            to='/add/createprofile'
+            className='btn primarybg  text-white d-flex gap-2 align-items-center f-14 shadow-sm'
+          >
+            <span className='text-white' style={{ textDecoration: 'none' }}>
               Add More Clients
-            </Link>
-          </button>
+            </span>
+          </Link>
         </div>
       </div>
     </div>
