@@ -10,6 +10,14 @@
   box-shadow: none !important;
 }
 
+.myinput::placeholder {
+  color: #939596 !important;
+}
+
+.myselect {
+  color: #939596 !important;
+}
+
 .primarycolor {
   color: #1334b3 !important;
 }
@@ -86,4 +94,21 @@
   .xs-f-10 {
     font-size: 10px !important;
   }
+}
+
+.w-48 {
+  width: 48% !important;
+}
+
+/* .addred { */
+/* color: red !important; */
+/* } */
+
+.addred option[selected]:after {
+  content: '' !important;
+}
+
+.addred option:after {
+  content: 'he' !important;
+  color: red !important;
 }
