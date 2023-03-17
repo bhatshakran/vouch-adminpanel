@@ -33,13 +33,19 @@ export async function action({ request, params }) {
     localStorage.setItem('token', res.data.token);
     return redirect('/clients');
   } catch (error) {
-    return error.message;
+    console.log(error);
+    if (error.code === 'ERR_BAD_REQUEST') {
+      console.log('return');
+      return error.response.data.error;
+    } else {
+      return error.message;
+    }
   }
 }
 
 const Login = () => {
   let errors = useActionData();
-
+  console.log(errors);
   return (
     <section className='d-flex align-items-center justify-content-center'>
       <Form
@@ -61,6 +67,7 @@ const Login = () => {
           >
             Enter your Username and Password{' '}
           </h6>
+          {errors && <span className='f-12 nunito text-danger '>{errors}</span>}
 
           <div className='mt-4 w-100'>
             <div className='input-group mb-3'>
