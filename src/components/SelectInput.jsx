@@ -13,7 +13,7 @@ const SelectInput = ({
       }}
     >
       <select
-        className={`border-0 py-2 w-100 h-100 myinput myselect  h-100`}
+        className={`border-0 py-2 w-100 h-100 myinput myselect bg-white  h-100`}
         required={required}
       >
         <option className='placeholder nunito'>
