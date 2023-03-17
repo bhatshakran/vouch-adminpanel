@@ -4,7 +4,7 @@ An admin template for handling client functionality built using [Vite](https://v
 
 # Live app
 
-The live app is running at [ClientTemplateVouch](https://main--genuine-marigold-035ef6.netlify.app/)
+The live app is running at [ClientTemplateVouch](https://clientadmintemplate.netlify.app/login)
 
 # Running Locally
 
