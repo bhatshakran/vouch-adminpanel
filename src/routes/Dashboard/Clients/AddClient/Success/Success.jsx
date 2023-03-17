@@ -6,6 +6,7 @@ import iss from '../images/iss.png';
 import sites from '../images/sites.png';
 
 const Success = () => {
+  window.scroll(0, 0);
   return (
     <section>
       <SuccessMsg />
